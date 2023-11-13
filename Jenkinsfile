@@ -6,9 +6,6 @@ pipeline {
         SONAR_TOKEN = '245e11b6ee8c2814c31821231545b5701f3c6131'
         registry = "aminebarguellil/skiapp" 
         DOCKER_IMAGE_TAG = "latest"
-        registryCredential="DockerHub-Credentials"
-        DOCKER_USERNAME="aminebarguellil"
-        DOCKER_PASSWORD="dckr_pat_FUPU-gjixxcDl9XqUrb9YFQiO2Y"
     }
     
     stages {
