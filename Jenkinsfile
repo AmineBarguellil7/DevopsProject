@@ -6,6 +6,9 @@ pipeline {
         SONAR_TOKEN = '245e11b6ee8c2814c31821231545b5701f3c6131'
         registry = "aminebarguellil/skiapp" 
         DOCKER_IMAGE_TAG = "latest"
+        registryCredential="DockerHub-Credentials"
+        DOCKER_USERNAME="aminebarguellil"
+        DOCKER_PASSWORD="dckr_pat_FUPU-gjixxcDl9XqUrb9YFQiO2Y"
     }
     
     stages {
@@ -61,8 +64,7 @@ pipeline {
         
         stage("Start Containers") {
             steps {
-                sh "sudo docker run --name mysqldb --network mynetwork -e MYSQL_ROOT_PASSWORD=root -v /home/mysql/data:/var/lib/mysql -d mysql:8"
-                sh "sudo docker run -p 9092:9092 --network mynetwork -d ${registry}"
+                sh "sudo docker-compose up -d"
             }
         }
         
