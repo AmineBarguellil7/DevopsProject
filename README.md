@@ -1,3 +1,5 @@
+This project involved setting up a complete CI/CD pipeline for a Spring Boot application.
+
 # Spring Boot - Academic project  
 For 4th year classes (engineering degree): ESPRIT engineering school
 
